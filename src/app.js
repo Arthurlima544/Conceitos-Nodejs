@@ -51,7 +51,7 @@ app.put("/repositories/:id", (request, response) => {
     title,
     url,
     techs,
-    likes:  repositories[repoIndex].likes, //insanooo
+    likes:  repositories[repoIndex].likes,
   }
 
   repositories[repoIndex] = repository;
@@ -86,8 +86,7 @@ app.post("/repositories/:id/like", (request, response) => {
 
   repositories[repoIndex].likes += 1;
 
-  
-  
+
   return response.json(repositories[repoIndex]);
 });
 
